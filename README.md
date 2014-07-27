@@ -1,4 +1,4 @@
-# andromedai.com
+# andromedai
 
 The dream of andromedai is to create a **much** better model of how technical education should work. Below I have outlined what I believe to be the 3 biggest problems in technical education. Please feel free to contribute your ideas to how the best type of technical education should work in our [wiki][1]! Or if you would like to contribute to this **README** file create a pull request. Don't know what a pull request is or how to use this website? I made an easy to follow 1 hour [playlist][2] on how to use this website.
 
