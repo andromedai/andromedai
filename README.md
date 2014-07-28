@@ -1,4 +1,4 @@
-# [andromedai.com](http://andromedai.com)
+# [andromedai](http://andromedai.com)
 
 The vision of andromedai is to make education the best it can possibly be. 
 For now we want to create a **much** better model specifically for technical 
