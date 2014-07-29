@@ -22,9 +22,7 @@ to this README.md file with a pull request. Don't know how to make
 a pull request or how to use this website? We made an easy 1.5 
 hour [playlist][2] on how to use this website.
 
-## Quality of Education Resources
-
-### Problem 1:
+## Problem 1: Quality of Education Resources
 How often do you zone out or are too nervous to ask questions in class? 
 Class environments can be intimidating, and the pace may be too fast/slow
 for *your* learning style. A [study][3] of 777 students at 6 colleges 
@@ -42,9 +40,7 @@ quality and relevant videos, quizzes, and projects are kept alive on
 the website through user up votes and low quality or outdated material 
 is removed when it is no longer the most popular.
 
-## Motivation & Cost
-
-### Problem 2 & 3:
+## Problem 2 & 3: Motivation & Cost
 The drop out rate of online learning websites like coursera.org is very 
 high. A [study][4] showed a 92.3% average drop out rate. Meanwhile, the 
 cost of technical college education continues to rise at an extremly 
