@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3068469519">
+    <data-source source="LOCAL" name="Rails andromedai: default" uuid="cf60178a-0627-4df5-9c42-23c29c038ff9">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/andromedai</jdbc-url>
+      <user-name>development</user-name>
+      <user-password>dfcedfcfdfdcdfcfdfc6dfc5dfdadfc7dfcfdfc4dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails andromedai: development" uuid="9a08fe3f-d489-4521-8a10-1648e289d9ee">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/andromedai</jdbc-url>
+      <user-name>development</user-name>
+      <user-password>dfcedfcfdfdcdfcfdfc6dfc5dfdadfc7dfcfdfc4dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails andromedai: test" uuid="ebbb421e-6bd0-4bff-8e41-63c96f66b492">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/andromedai</jdbc-url>
+      <user-name>development</user-name>
+      <user-password>dfcedfcfdfdcdfcfdfc6dfc5dfdadfc7dfcfdfc4dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails andromedai: production" uuid="296b3a62-9fd6-4063-b587-622e0137ead1">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/andromedai</jdbc-url>
+      <user-name>development</user-name>
+      <user-password>dfcedfcfdfdcdfcfdfc6dfc5dfdadfc7dfcfdfc4dfde</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
