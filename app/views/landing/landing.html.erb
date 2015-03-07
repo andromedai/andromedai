@@ -17,11 +17,38 @@
 
 <div id="landing-page-body">
   <div id="landing-page-content">
-
+    <div class="landing-section">
+        <div class="landing-left-section-image-container"></div>
+        <div class="landing-right-section-text-container">
+          <p>Andromedai is a blah blah blah (Something smart should go here)</p>
+        </div>
+    </div>
   </div>
 </div>
 
 <style>
+
+    .landing-section{
+        width: 100%;
+        height: 500px;
+    }
+
+    .landing-left-section-image-container{
+        display: inline-block;
+        float: left;
+        width: 40%;
+        height: 100%;
+        background-image: url('/assets/andromedai-golden-logo.jpg');
+        background-size: 50% 60%;
+        background-repeat: no-repeat;
+    }
+
+    .landing-right-section-text-container{
+        display: inline-block;
+        float: right;
+        width: 60%;
+        font-size: 22px;
+    }
 
     #inner-animation-response-container{
         display: none;
@@ -117,9 +144,8 @@
     }
 
     #landing-page-content{
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
-        border: solid black 3px;
         height: 500px;
     }
 
