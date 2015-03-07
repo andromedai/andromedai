@@ -65,7 +65,7 @@ function api_request(pars, callback) {
     if (validRequest) {
 
         //Build request url
-        var request_url = 'http://localhost:3000/api/' + pars['version'] + '/' + pars['api_name'] + '/' +
+        var request_url = window.location.origin +'/api/' + pars['version'] + '/' + pars['api_name'] + '/' +
             pars['api_method'];
 
         //Create Ajax Request

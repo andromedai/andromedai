@@ -12,8 +12,8 @@
     <data-source source="LOCAL" name="Rails andromedai: development" uuid="9a08fe3f-d489-4521-8a10-1648e289d9ee">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/andromedaidev</jdbc-url>
-      <user-name>andromedai</user-name>
+      <jdbc-url>jdbc:mysql://127.0.0.1/development</jdbc-url>
+      <user-name>adminu4bVK9N</user-name>
       <user-password>dfcbdfc4dfcedfd8dfc5dfc7dfcfdfcedfcbdfc3</user-password>
       <libraries />
     </data-source>
