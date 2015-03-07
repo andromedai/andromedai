@@ -1,6 +1,6 @@
 class StudentController < ApplicationController
 
-  before_filter :validateAuthToken
+  before_filter :validateAuthToken, :validateStudent
 
   def student_dashboard
 

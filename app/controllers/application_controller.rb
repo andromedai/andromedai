@@ -49,6 +49,28 @@ class ApplicationController < ActionController::Base
     return false
   end
 
+  # Validates that logged in user is a Student
+  def validateStudent
+    user = getActiveUser(cookies)
+    if user.user_account_type == 'student'
+      return true
+    else
+      redirect_to login_path
+      return false
+    end
+  end
+
+  # Validates that logged in user is a Teacher
+  def validateTeacher
+    user = getActiveUser(cookies)
+    if user.user_account_type == 'teacher'
+      return true
+    else
+      redirect_to login_path
+      return false
+    end
+  end
+
   # Gets the active user based on the session user_id value
   # Returns nil if no user can be determined
   def getActiveUser(cookies=nil)
