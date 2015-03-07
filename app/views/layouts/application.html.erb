@@ -2,7 +2,12 @@
 <html>
 <head>
   <title>Andromedai</title>
-  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application.js' %>
+  <%= stylesheet_link_tag 'application.css' %>
+
+  <%= stylesheet_link_tag controller.controller_name + '/' + controller.action_name %>
+  <%= javascript_include_tag controller.controller_name + '/' + controller.action_name %>
+
 </head>
 <body>
 
