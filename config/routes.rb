@@ -13,6 +13,16 @@ Rails.application.routes.draw do
   get 'api' => 'api#api_documentation'
   get 'api/:version/' => 'api#api_documentation'
 
+  # Semi-Public Views
+  get 'labs' => 'public#labs'
+
+  # Teacher Routes
+  get 'student_dashboard' => 'student#student_dashboard'
+
+  # Student Routes
+  get 'teacher_dashboard' => 'teacher#teacher_dashboard'
+  get 'lab_creator' => 'teacher#lab_creator'
+
   # Matches all v1 apis requests to the request manager
   get 'api/:version/:api', to: 'api#request_manager', via: :all, constraints: {}
   get 'api/:version/:api/:method', to: 'api#request_manager', via: :all, constraints: {}

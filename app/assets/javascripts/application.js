@@ -116,7 +116,13 @@ function attemptUserLogin() {
 
     api_request(parameters, function(response){
         if(response['success'] == true) {
-            window.location.replace("user_dashboard");
+
+            if(response['user_account_type'] == 'student') {
+                window.location.replace("user_dashboard");
+            }
+            else if(response['user_account_type'] == 'teacher'){
+                window.location.replace("teacher_dashboard");
+            }
             return true;
         }
         else {

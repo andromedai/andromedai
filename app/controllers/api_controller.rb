@@ -21,6 +21,7 @@ class ApiController < ApplicationController
     @@request['p2'] = params[:p2]
     @@request['p3'] = params[:p3]
     @@request['p4'] = params[:p4]
+    @@request['p5'] = params[:p5]
 
     # Find appropriate apis to call for the request
     if (@@request['api_name'] == 'user')

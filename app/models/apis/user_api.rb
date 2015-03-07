@@ -60,7 +60,7 @@ class UserAPI < BaseApi
       response = {}
 
       # Verify inputs exist for request
-      if(request['p1'].nil? || request['p2'].nil? || request['p3'].nil? || request['p4'].nil?)
+      if(request['p1'].nil? || request['p2'].nil? || request['p3'].nil? || request['p4'].nil? || request['p5'].nil?)
         response['message'] = 'Parameters missing in request'
         response['success'] = false
         return response
@@ -73,8 +73,14 @@ class UserAPI < BaseApi
         return response
       end
 
+      if request['p5'] != 'student' && request['p5'] != 'teacher'
+        response['message'] = 'Invalid account type /' + request['p5'] + '/'
+        response['success'] = false
+        return response
+      end
+
       # Create new user given inputs
-      new_user = User.new(user_id: SecureRandom.uuid, user_firstname: request['p1'],
+      new_user = User.new(user_id: SecureRandom.uuid, user_firstname: request['p1'], user_account_type: request['p5'],
                           user_lastname: request['p2'], user_username: (request['p1'] + ' ' + request['p2']), user_verified: false)
 
       # Create new email for user created
@@ -142,6 +148,7 @@ class UserAPI < BaseApi
           @cookies[:auth_token] = nil
         end
 
+        response['user_account_type'] = user.user_account_type
         response['session_id'] = session[:user_id]
         response['message'] = 'User Authenticated'
         response['success'] = true

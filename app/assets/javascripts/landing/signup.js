@@ -63,6 +63,8 @@ function attemptUserSignup() {
     parameters['p3'] = $('#signup-email').val();
     parameters['p4'] = $('#signup-password').val();
 
+    var account_type = $('input:radio[name=account_type]:checked').val();
+
     //Split name for verification later
     var full_name = $('#signup-full-name').val().split(' ');
 
@@ -97,17 +99,26 @@ function attemptUserSignup() {
         return false;
     }
 
+
+    if(account_type == 'student' || account_type == 'teacher') {
+        parameters['p5'] = account_type;
+    }
+    else {
+        alert("You must register as a Student or Teacher!");
+        return false;
+    }
+
+
     $('#login-button').prop("disabled", true);
 
     api_request(parameters, function(response){
 
         $('#login-button').prop("disabled", false);
         if(response['success'] == true) {
-            alert(response);
+
             return true;
         }
         else {
-            alert(response);
             return false;
         }
     });

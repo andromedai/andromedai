@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150303170233) do
     t.boolean  "user_verified",                      default: false
     t.string   "verification_key",        limit: 36
     t.datetime "verification_expiration"
+    t.string   "user_account_type",       limit: 32,                 null: false
     t.boolean  "currently_logged_in",                default: false
     t.datetime "last_logged_in"
     t.datetime "created_at"
