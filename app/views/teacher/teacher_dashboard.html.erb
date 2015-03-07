@@ -3,22 +3,25 @@
 
 <h2>My Labs </h2>
 <div id="teacher-dashboard-lab-list">
-  <%=  %>
+
   <table>
-     <thead>
-        <th>Lab ID</th>
-        <th>Lab Title</th>
-        <th>Likes</th>
-        <th>View</th>
-     </thead>
+    <thead>
+    <th>Lab ID</th>
+    <th>Lab Title</th>
+    <th>Likes</th>
+    <th>View</th>
+    </thead>
     <tbody>
+  <% Lab.where('user_id=?', controller.getActiveUser.user_id).each do |lab| %>
+
         <tr>
-          <td><%= %></td>
-          <td><%= %></td>
-          <td><%= %></td>
+          <td><%= lab.lab_id %></td>
+          <td><b><%= lab.lab_title %></b></td>
+          <td><%= 0 %></td>
           <td><button>View</button></td>
         </tr>
+  <% end %>
+
     </tbody>
   </table>
-  <%=  %>
 </div>

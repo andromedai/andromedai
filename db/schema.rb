@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303170233) do
+ActiveRecord::Schema.define(version: 20150307013442) do
 
   create_table "auth_tokens", force: true do |t|
     t.string   "auth_token_id",      limit: 36, null: false
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20150303170233) do
     t.string   "email_id",      limit: 36,  null: false
     t.string   "email_address", limit: 256, null: false
     t.string   "reset_key",     limit: 36
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "labs", force: true do |t|
+    t.string   "user_id",         limit: 36,   null: false
+    t.string   "lab_id",          limit: 36,   null: false
+    t.string   "lab_title",       limit: 96,   null: false
+    t.string   "lab_description", limit: 1048, null: false
+    t.string   "lab_video_url",   limit: 256
     t.datetime "created_at"
     t.datetime "updated_at"
   end

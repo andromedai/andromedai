@@ -11,6 +11,8 @@ class ApiController < ApplicationController
   # Pulls in the params and apis request info to be parsed
   def request_manager
 
+    begin
+
     request.format = 'json'
 
     @@request = {}
@@ -26,17 +28,14 @@ class ApiController < ApplicationController
     # Find appropriate apis to call for the request
     if (@@request['api_name'] == 'user')
 
-      # Reset session every time login or logout occurs
-      # if @@request['api_method'] == 'login' || @@request['api_method'] == 'logout'
-      #   reset_session
-      # end
-
       require(api_folder + 'user_api')
       api = UserAPI.new(@@request, session, cookies)
       return_val = api.process_request
 
-    elsif (@@request['api_name'] == '')
-
+    elsif (@@request['api_name'] == 'lab')
+      require(api_folder + 'lab_api')
+      api = LabAPI.new(@@request, session, cookies)
+      return_val = api.process_request
 
     else
       # Request matched no known apis and has failed
@@ -49,6 +48,14 @@ class ApiController < ApplicationController
     render json: JSON.pretty_generate(return_val)
     return true
 
+    rescue Exception => e
+      return_val = {}
+      return_val['message'] = e.message
+      return_val['success'] = false
+
+      render json: JSON.pretty_generate(return_val)
+      return true
+      end
   end
 
   #
