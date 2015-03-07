@@ -126,6 +126,7 @@ function attemptUserLogin() {
             return true;
         }
         else {
+            alert(response['message']);
             return false;
         }
     });

@@ -13,6 +13,8 @@ class LabAPI < BaseApi
     # to correct call
     if request['api_method'] == 'create'
       return createNewLab
+    elsif request['api_method'] == 'delete'
+      return deleteLab
     end
 
   end
@@ -49,5 +51,41 @@ class LabAPI < BaseApi
     end
   end
 
+  def deleteLab
+
+    response = {}
+
+    begin
+
+      # Verify inputs exist for request
+      if(request['p1'].nil?)
+        response['message'] = 'Parameters missing in request'
+        response['success'] = false
+        return response
+      end
+
+      user = getActiveUser(@cookies)
+
+      lab = Lab.where('user_id=? AND lab_id=?', user.user_id, request['p1']).first
+
+      if lab.nil?
+        response['message'] = 'A lab with that ID does not exist for the logged in user'
+        response['success'] = false
+        return response
+      end
+
+      # Remove the lab from the database
+      lab.destroy
+
+      response['message'] = 'Lab deleted successfully'
+      response['success'] = true
+      return response
+
+    rescue Exception => e
+      response['message'] = e.message
+      response['success'] = false
+      return response
+    end
+  end
 
 end

@@ -1,23 +1,22 @@
 <h1>Teacher Dashboard</h1>
 <a href="lab_creator">Create New Lab +</a>
 
-<h2>My Labs </h2>
+<h2>Your Labs </h2>
 <div id="teacher-dashboard-lab-list">
 
   <table>
     <thead>
-    <th>Lab ID</th>
     <th>Lab Title</th>
     <th>Likes</th>
     <th>View</th>
     </thead>
     <tbody>
   <% Lab.where('user_id=?', controller.getActiveUser.user_id).each do |lab| %>
-        <tr>
-          <td><%= lab.lab_id %></td>
+        <tr id="lab_row_<%= lab.lab_id %>">
           <td><b><%= lab.lab_title %></b></td>
           <td><%= 0 %></td>
           <td><%= link_to 'View', { :controller => 'public', :action => 'lab_view', :lab_id => lab.lab_id } %></td>
+          <td><button onclick="deleteLab('<%= lab.lab_id %>');">Delete</button></td>
         </tr>
   <% end %>
 
