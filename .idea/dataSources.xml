@@ -14,7 +14,7 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://127.0.0.1/development</jdbc-url>
       <user-name>adminu4bVK9N</user-name>
-      <user-password>dfcbdfc4dfcedfd8dfc5dfc7dfcfdfcedfcbdfc3</user-password>
+      <user-password>dff5dff5dfe8dfe6dffddf9bdfc7dfdbdfc9dfeedf87dfcc</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails andromedai: test" uuid="ebbb421e-6bd0-4bff-8e41-63c96f66b492">

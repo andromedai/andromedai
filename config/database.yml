@@ -6,7 +6,7 @@ development: &default
   pool: 5
   database: 'development'
   username: 'adminu4bVK9N'
-  password: '__BLW1mqcD'
+  password: '__BLW1mqcD-f'
 
 # Production/Openshift database setup
 production:
