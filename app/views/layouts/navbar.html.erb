@@ -4,9 +4,13 @@
 <div id="navbar-full-container">
 <div id="navbar-official-logo"></div>
 
-<span id="navbar-user-firstname"><%= @user.user_firstname %></span>
-<img id="navbar-user-profile-photo" src="andromedai-black-logo.png"/>
-<button>Log out</button>
+<% if !@user.nil? %>
+<span id="navbar-user-firstname"><%= 'Hi, ' + @user.user_firstname %></span>
+<img id="navbar-user-profile-photo" src="/assets/andromedai-golden-logo.jpg"/>
+<button id="navbar-logout-button" onclick="attemptUserLogout();">Log out</button>
+<% else %>
+<button id="navbar-login-button" onclick="window.location.replace('login');">Login</button>
+<% end %>
 </div>
 
 <style>
@@ -31,6 +35,26 @@
       width: 200px;
       display: inline-block;
       background-image: url(/assets/andromedai_logo_final.png);
+  }
+
+  #navbar-logout-button{
+      float: right;
+  }
+
+  #navbar-login-button{
+      width: 100px;
+      height: 35px;
+      float: right;
+  }
+
+  #navbar-user-firstname{
+      position: relative;
+      bottom: 20px;
+  }
+
+  #navbar-user-profile-photo{
+      position: relative;
+      bottom: 5px;
   }
 </style>
 

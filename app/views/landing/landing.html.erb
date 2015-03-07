@@ -20,13 +20,29 @@
     <div class="landing-section">
         <div class="landing-left-section-image-container"></div>
         <div class="landing-right-section-text-container">
-          <p></p>
+          <button id="landing-browse-all-button" onclick="window.location.replace('labs');">Browse All Labs on Andromedai</button>
         </div>
     </div>
   </div>
 </div>
 
 <style>
+    #landing-browse-all-button{
+        width: 400px;
+        height: 60px;
+        font-size: 22px;
+        border-width: 0px;
+        color: white;
+        background-color: #4682B4;
+        top: 150px;
+        position: relative;
+    }
+
+    #landing-browse-all-button:hover{
+        font-weight: bold;
+        background-color: #33A1DE;
+        cursor: pointer;
+    }
 
     .landing-section{
         width: 100%;

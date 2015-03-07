@@ -1,21 +1,19 @@
-<h1>Andromedai Labs</h1>
-
-<div>
-
-<table>
+<div id="lab-list-container">
+<h1 class="generic-page-title">Andromedai Labs</h1>
+<table border="3">
   <thead>
   <th>Lab Title</th>
   <th>Teacher</th>
   <th>Likes</th>
-  <th>View</th>
+  <th>View Lab</th>
   </thead>
   <tbody>
   <% Lab.all.each do |lab| %>
       <tr>
         <td><b><%= lab.lab_title %></b></td>
-        <td><%= 'Teacher Name' %></td>
-        <td><%= 0 %></td>
-        <td><%= link_to 'View', { :controller => 'public', :action => 'lab_view', :lab_id => lab.lab_id } %></td>
+        <td><%= User.where('user_id=?', lab.user_id).first.user_firstname + ' ' + User.where('user_id=?', lab.user_id).first.user_lastname  %></td>
+        <td><center><%= 0 %></center></td>
+        <td><center><%= link_to 'View', { :controller => 'public', :action => 'lab_view', :lab_id => lab.lab_id } %></center></td>
       </tr>
   <% end %>
 
@@ -23,3 +21,12 @@
 </table>
 
 </div>
+
+<style>
+  #lab-list-container{
+      margin: 50px auto;
+      width: 500px;
+      height: 800px;
+  }
+
+</style>

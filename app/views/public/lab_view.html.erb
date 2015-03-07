@@ -1,22 +1,28 @@
+<% teacher = User.where('user_id=?', @lab.user_id).first %>
 
 <div id="lab-top-content-container">
-    <div id="lab-title"><h1><%= @lab.lab_title %></h1></div>
+    <div id="lab-title"><h1><%= @lab.lab_title %></h1> <b>by <%= teacher.user_firstname %></b></div>
     <div id="lab-video-container">
     <iframe width="100%" height="100%" src="<%= @lab.lab_video_url %>" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div id="lab-description-text">
+      </br><b>Lab Description</b></br>
+      <i><%= @lab.lab_description %></i>
     </div>
 </div>
 
 <div>
-  <div>The Teacher</div>
-  <div>
 
-  </div>
 </div>
 
 <style>
 
   #lab-title{
 
+  }
+
+  #lab-description-text{
+      margin: 0 auto;
   }
 
   #lab-top-content-container{
