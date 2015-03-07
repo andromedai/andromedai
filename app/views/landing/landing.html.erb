@@ -1,11 +1,16 @@
 <div id="landing-photo-container">
 
-  <div id="landing-login-container"><input placeholder="email"/><input placeholder="password" type="password"/><button>Login</button></div>
+  <div id="landing-login-container"><button id="landing-login-redirect-button">Login</button></div>
 
   <div id="landing-photo-logo"></div>
 
   <div id="landing-email-notification-container">
-    <input id="landing-invite-input" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e-mail address"/><button id="landing-invite-button">Request Invite</button>
+    <span id="inner-animation-container">
+        <input id="landing-invite-input" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e-mail address"/><button id="landing-invite-button">Request Invite</button>
+    </span>
+    <span id="inner-animation-response-container">
+      <h2 id="landing-invite-request-text"></h2>
+    </span>
   </div>
 
 </div>
@@ -18,8 +23,12 @@
 
 <style>
 
-    body{
-        background-color: black;
+    #inner-animation-response-container{
+        display: none;
+        color: white;
+        left: 30px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     #landing-email-notification-container{
@@ -45,9 +54,26 @@
         top: -1px;
     }
 
+    #landing-login-redirect-button{
+        float: right;
+        background-color: #4682B4;
+        border-radius: 3px;
+        width: 60px;
+        height: 30px;
+        font-size: 16px;
+        color: white;
+        border-width: 0px;
+    }
+
+    #landing-login-redirect-button:hover{
+        font-weight: bold;
+        background-color: #33A1DE;
+        cursor: pointer;
+    }
+
     #landing-invite-button:hover{
         font-weight: bold;
-        background-color: midnightblue;
+        background-color: #33A1DE;
         cursor: pointer;
     }
 

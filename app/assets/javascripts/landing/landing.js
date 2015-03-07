@@ -10,6 +10,9 @@ $(document).ready(function(){
         attemptEmailRequest();
     });
 
+    $('#landing-login-redirect-button').on("click", function(){
+        window.location.replace("login");
+    });
 
     /*
      Allows enter key to be used in login form
@@ -39,6 +42,8 @@ function attemptEmailRequest(){
         return false;
     }
 
+    $('#landing-invite-button').prop("disabled", true);
+
     api_request(parameters, function(response){
         if(response['success'] == true) {
             animateResponse(response['completion_message']);
@@ -46,6 +51,7 @@ function attemptEmailRequest(){
         }
         else {
             animateResponse(response['completion_message']);
+            $('#landing-invite-input').focus();
             return false;
         }
     });
@@ -53,5 +59,17 @@ function attemptEmailRequest(){
 }
 
 function animateResponse(message){
-
+    $('#landing-invite-request-text').text(message);
+    $('#inner-animation-container').fadeOut("slow", function(){
+        $('#landing-invite-input').val('');
+        $('#inner-animation-response-container').fadeIn("slow", function(){
+            setTimeout(function() {
+                $('#inner-animation-response-container').fadeOut("slow", function(){
+                    $('#inner-animation-container').fadeIn("slow", function(){
+                        $('#landing-invite-button').prop("disabled", false);
+                    })
+                });
+            }, 3000);
+        });
+    });
 }

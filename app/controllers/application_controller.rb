@@ -113,4 +113,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def validEmail(email)
+    if email =~ /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i
+      return true
+    end
+    return false
+  end
+
 end

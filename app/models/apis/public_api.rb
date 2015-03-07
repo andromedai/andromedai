@@ -1,7 +1,7 @@
 require 'bcrypt'
 require_relative('base_api')
 
-class LabAPI < BaseApi
+class PublicAPI < BaseApi
 
 
   def initialize(request, session, cookies)
@@ -31,10 +31,27 @@ class LabAPI < BaseApi
         return response
       end
 
+      if !validEmail(request['p1'])
+        response['completion_message'] = 'Please enter a valid email address'
+        response['message'] = 'Invalid email format'
+        response['success'] = false
+        return response
+      end
 
+      existing_request = InviteRequest.where('invite_request_email_address=?', request['p1']).first
 
-      response['lab_id'] = new_lab.lab_id
-      response['message'] = 'New lab created'
+      if !existing_request.nil?
+        response['completion_message'] = 'You have already requested an invite.'
+        response['message'] = 'Email already requested'
+        response['success'] = false
+        return response
+      end
+
+      new_request = InviteRequest.new(:invite_request_id => SecureRandom.uuid, :invite_request_email_address => request['p1'])
+      new_request.save
+
+      response['completion_message'] = 'Your request was received. Thank You!'
+      response['message'] = 'Invite request added for ' + new_request.invite_request_email_address
       response['success'] = true
       return response
 
