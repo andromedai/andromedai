@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'landing#index'
+  root 'landing#landing'
 
   get 'login' => 'landing#login'
   get 'signup' => 'landing#signup'
@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   # Semi-Public Views
   get 'labs' => 'public#labs'
+  get 'lab_view' => 'public#lab_view'
 
   # Teacher Routes
   get 'student_dashboard' => 'student#student_dashboard'

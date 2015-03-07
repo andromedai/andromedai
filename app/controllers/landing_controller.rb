@@ -1,6 +1,6 @@
 class LandingController < ApplicationController
 
-  def index
+  def landing
 
   end
 

@@ -13,12 +13,11 @@
     </thead>
     <tbody>
   <% Lab.where('user_id=?', controller.getActiveUser.user_id).each do |lab| %>
-
         <tr>
           <td><%= lab.lab_id %></td>
           <td><b><%= lab.lab_title %></b></td>
           <td><%= 0 %></td>
-          <td><button>View</button></td>
+          <td><%= link_to 'View', { :controller => 'public', :action => 'lab_view', :lab_id => lab.lab_id } %></td>
         </tr>
   <% end %>
 

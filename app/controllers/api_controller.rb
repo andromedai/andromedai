@@ -37,6 +37,11 @@ class ApiController < ApplicationController
       api = LabAPI.new(@@request, session, cookies)
       return_val = api.process_request
 
+    elsif (@@request['api_name'] == 'public')
+      require(api_folder + 'public_api')
+      api = PublicAPI.new(@@request, session, cookies)
+      return_val = api.process_request
+
     else
       # Request matched no known apis and has failed
       return_val = {}

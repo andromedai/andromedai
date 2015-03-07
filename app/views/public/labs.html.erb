@@ -1,1 +1,25 @@
-<h1>Labs List</h1>
+<h1>Andromedai Labs</h1>
+
+<div>
+
+<table>
+  <thead>
+  <th>Lab Title</th>
+  <th>Teacher</th>
+  <th>Likes</th>
+  <th>View</th>
+  </thead>
+  <tbody>
+  <% Lab.all.each do |lab| %>
+      <tr>
+        <td><b><%= lab.lab_title %></b></td>
+        <td><%= 'Teacher Name' %></td>
+        <td><%= 0 %></td>
+        <td><%= link_to 'View', { :controller => 'public', :action => 'lab_view', :lab_id => lab.lab_id } %></td>
+      </tr>
+  <% end %>
+
+  </tbody>
+</table>
+
+</div>

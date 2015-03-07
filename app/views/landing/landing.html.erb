@@ -1,0 +1,100 @@
+<div id="landing-photo-container">
+
+  <div id="landing-login-container"><input placeholder="email"/><input placeholder="password" type="password"/><button>Login</button></div>
+
+  <div id="landing-photo-logo"></div>
+
+  <div id="landing-email-notification-container">
+    <input id="landing-invite-input" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e-mail address"/><button id="landing-invite-button">Request Invite</button>
+  </div>
+
+</div>
+
+<div id="landing-page-body">
+  <div id="landing-page-content">
+
+  </div>
+</div>
+
+<style>
+
+    body{
+        background-color: black;
+    }
+
+    #landing-email-notification-container{
+        margin: 0 auto;
+        position: absolute;
+        bottom: 275px;
+        left: 35%;
+    }
+
+    #landing-invite-button{
+        width: 175px;
+        height: 37px;
+        font-size: 16px;
+        border-radius: 4px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-width: 0px;
+        color: white;
+        background-color: #4682B4;
+        bottom: 0;
+        position: relative;
+        right: 5px;
+        top: -1px;
+    }
+
+    #landing-invite-button:hover{
+        font-weight: bold;
+        background-color: midnightblue;
+        cursor: pointer;
+    }
+
+    #landing-invite-input{
+        height: 34px;
+        width: 300px;
+        border-radius: 2px;
+        border: solid black 1px;
+        font-size: 20px;
+        bottom: 0;
+        position: relative;
+        padding-left: 10px;
+
+        font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+    }
+
+    #landing-photo-container{
+        position: relative;
+        width: 100%;
+        height: 650px;
+        background-color: #2F4F4F;
+        background-image: url('assets/landing-earth-photo.jpg');
+    }
+
+    #landing-photo-logo{
+        width: 600px;
+        height: 150px;
+        background-image: url('assets/andromedai-white-logo.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        margin: 0 auto;
+        position: absolute;
+        bottom: 300px;
+        left: 32%;
+    }
+
+    #landing-page-body{
+        width: 100%;
+
+    }
+
+    #landing-page-content{
+        width: 80%;
+        margin: 0 auto;
+        border: solid black 3px;
+        height: 500px;
+    }
+
+</style>
