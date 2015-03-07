@@ -1,0 +1,24 @@
+#signup-container{
+  width: 300px;
+  height: 400px;
+  margin: 75px auto;
+
+  .signup-input{
+    width: 80%;
+    height: 25px;
+    margin: 5px auto;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  button{
+    width: 80%;
+    height: 35px;
+    margin: 0 auto;
+  }
+
+  input[type=checkbox]{
+    width: 20px;
+  }
+
+}
