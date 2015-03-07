@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'landing#index'
 
+  get 'login' => 'landing#login'
+  get 'signup' => 'landing#signup'
+
   # API ROUTES *Change With Caution*
   # get 'apis', to: ApiController.action(:api_documentation)
   get 'api' => 'api#api_documentation'
