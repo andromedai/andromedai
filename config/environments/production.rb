@@ -74,5 +74,9 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+  # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.secret_key_base = '73dd5f27f4bc1bc87c499ad3bc53cafdfa3c8a80fcde80ce8a46ea1cb49af820676c8e9385e6ee845680b1087d5c2f97965918ac15710755be6f1d58d67b6339'
+
 end

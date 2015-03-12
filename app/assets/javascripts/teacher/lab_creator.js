@@ -43,7 +43,10 @@ function attemptCreateNewLab() {
 
         $('#create-lab-button').prop("disabled", false);
         if(response['success'] == true) {
-
+            $('#lab-title').val('');
+            $('#lab-description').val('');
+            $('#lab-video-url').val('');
+            alert("Lab Created");
             return true;
         }
         else {
