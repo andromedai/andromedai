@@ -1,0 +1,61 @@
+<% if controller.controller_name != 'landing' %>
+
+<% @user = controller.getActiveUser %>
+<div id="navbar-full-container">
+<div id="navbar-official-logo"></div>
+
+<% if !@user.nil? %>
+<span id="navbar-user-firstname"><%= 'Hi, ' + @user.user_firstname %></span>
+<img id="navbar-user-profile-photo" src="/assets/andromedai-golden-logo.jpg"/>
+<button id="navbar-logout-button" onclick="attemptUserLogout();">Log out</button>
+<% else %>
+<button id="navbar-login-button" onclick="window.location.replace('login');">Login</button>
+<% end %>
+</div>
+
+<style>
+  #navbar-full-container{
+      width: 100%;
+      height: 60px;
+
+      background-color: #305050;
+  }
+
+  #navbar-user-firstname{
+      font-size: 24px;;
+  }
+
+  #navbar-user-profile-photo{
+      height: 80%;
+
+  }
+
+  #navbar-official-logo{
+      height: 100%;
+      width: 200px;
+      display: inline-block;
+      background-image: url(/assets/andromedai_logo_final.png);
+  }
+
+  #navbar-logout-button{
+      float: right;
+  }
+
+  #navbar-login-button{
+      width: 100px;
+      height: 35px;
+      float: right;
+  }
+
+  #navbar-user-firstname{
+      position: relative;
+      bottom: 20px;
+  }
+
+  #navbar-user-profile-photo{
+      position: relative;
+      bottom: 5px;
+  }
+</style>
+
+<% end %>

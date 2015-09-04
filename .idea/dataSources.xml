@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3068469519">
+    <data-source source="LOCAL" name="Rails andromedai: default" uuid="cf60178a-0627-4df5-9c42-23c29c038ff9">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/andromedaidev</jdbc-url>
+      <user-name>andromedai</user-name>
+      <user-password>dfcbdfc4dfcedfd8dfc5dfc7dfcfdfcedfcbdfc3</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails andromedai: development" uuid="9a08fe3f-d489-4521-8a10-1648e289d9ee">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/development</jdbc-url>
+      <user-name>adminu4bVK9N</user-name>
+      <user-password>dff5dff5dfe8dfe6dffddf9bdfc7dfdbdfc9dfeedf87dfcc</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails andromedai: test" uuid="ebbb421e-6bd0-4bff-8e41-63c96f66b492">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/andromedaidev</jdbc-url>
+      <user-name>andromedai</user-name>
+      <user-password>dfcbdfc4dfcedfd8dfc5dfc7dfcfdfcedfcbdfc3</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails andromedai: production" uuid="296b3a62-9fd6-4063-b587-622e0137ead1">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://&lt;%=ENV['OPENSHIFT_MYSQL_DB_HOST']%&gt;:&lt;%=ENV['OPENSHIFT_MYSQL_DB_PORT']%&gt;/&lt;%=ENV['OPENSHIFT_APP_NAME']%&gt;</jdbc-url>
+      <user-name>&lt;%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%&gt;</user-name>
+      <user-password>df96df8fdf97dfefdfe4dffcdff1df8ddfe5dffadfefdfe4dff9dfe2dfe3dfecdffedff5dfe7dff3dff9dffbdfe6dff5dfeedfe8dff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

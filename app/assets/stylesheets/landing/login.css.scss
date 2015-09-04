@@ -1,0 +1,32 @@
+#login-container{
+  width: 300px;
+  height: 400px;
+  margin: 50px auto;
+  color: white;
+
+  .login-input{
+    width: 80%;
+    height: 25px;
+    margin: 5px auto;
+  }
+
+  button{
+    width: 80%;
+    height: 35px;
+    margin: 8px 0;
+  }
+
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+  background-image: url('/assets/login-background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

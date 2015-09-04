@@ -1,0 +1,21 @@
+
+# Default Development database setup for localhost
+development: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: 'development'
+  username: 'adminu4bVK9N'
+  password: '__BLW1mqcD-f'
+
+# Production/Openshift database setup
+production:
+  adapter: mysql2
+  database: "<%=ENV['OPENSHIFT_APP_NAME']%>"
+  username: "<%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>"
+  password: "<%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>"
+  host:     <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port:     <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  pool: 5
+  timeout: 5000
+  encoding: utf8

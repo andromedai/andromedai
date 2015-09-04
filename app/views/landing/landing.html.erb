@@ -1,0 +1,168 @@
+<div id="landing-photo-container">
+
+  <div id="landing-login-container"><button id="landing-login-redirect-button">Login</button></div>
+
+  <div id="landing-photo-logo"></div>
+
+  <div id="landing-email-notification-container">
+    <span id="inner-animation-container">
+        <input id="landing-invite-input" maxlength="64" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e-mail address"/><button id="landing-invite-button">Request Invite</button>
+    </span>
+    <span id="inner-animation-response-container">
+      <h2 id="landing-invite-request-text">Something is wrong! Please refresh and try again</h2>
+    </span>
+  </div>
+
+</div>
+
+<div id="landing-page-body">
+  <div id="landing-page-content">
+    <div class="landing-section">
+        <div class="landing-left-section-image-container"></div>
+        <div class="landing-right-section-text-container">
+          <button id="landing-browse-all-button" onclick="window.location.replace('labs');">Browse All Labs on Andromedai</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    #landing-browse-all-button{
+        width: 400px;
+        height: 60px;
+        font-size: 22px;
+        border-width: 0px;
+        color: white;
+        background-color: #4682B4;
+        top: 150px;
+        position: relative;
+    }
+
+    #landing-browse-all-button:hover{
+        font-weight: bold;
+        background-color: #33A1DE;
+        cursor: pointer;
+    }
+
+    .landing-section{
+        width: 100%;
+        height: 500px;
+    }
+
+    .landing-left-section-image-container{
+        display: inline-block;
+        float: left;
+        width: 40%;
+        height: 100%;
+        background-image: url('/assets/andromedai-golden-logo.jpg');
+        background-size: 50% 60%;
+        background-repeat: no-repeat;
+    }
+
+    .landing-right-section-text-container{
+        display: inline-block;
+        float: right;
+        width: 60%;
+        font-size: 22px;
+    }
+
+    #inner-animation-response-container{
+        display: none;
+        color: white;
+        left: 30px;
+        margin: 0 auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #landing-email-notification-container{
+        margin: 0 auto;
+        position: absolute;
+        bottom: 275px;
+        left: 35%;
+    }
+
+    #landing-invite-button{
+        width: 175px;
+        height: 37px;
+        font-size: 16px;
+        border-radius: 4px;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+        border-width: 0px;
+        color: white;
+        background-color: #4682B4;
+        bottom: 0;
+        position: relative;
+        right: 5px;
+        top: -1px;
+    }
+
+    #landing-login-redirect-button{
+        float: right;
+        background-color: #4682B4;
+        border-radius: 3px;
+        width: 60px;
+        height: 30px;
+        font-size: 16px;
+        color: white;
+        border-width: 0px;
+    }
+
+    #landing-login-redirect-button:hover{
+        font-weight: bold;
+        background-color: #33A1DE;
+        cursor: pointer;
+    }
+
+    #landing-invite-button:hover{
+        font-weight: bold;
+        background-color: #33A1DE;
+        cursor: pointer;
+    }
+
+    #landing-invite-input{
+        height: 34px;
+        width: 300px;
+        border-radius: 2px;
+        border: solid black 1px;
+        font-size: 20px;
+        bottom: 0;
+        position: relative;
+        padding-left: 10px;
+
+        font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;
+    }
+
+    #landing-photo-container{
+        position: relative;
+        width: 100%;
+        height: 650px;
+        background-color: #2F4F4F;
+        background-image: url('assets/landing-earth-photo.jpg');
+    }
+
+    #landing-photo-logo{
+        width: 600px;
+        height: 150px;
+        background-image: url('assets/andromedai-white-logo.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        margin: 0 auto;
+        position: absolute;
+        bottom: 300px;
+        left: 32%;
+    }
+
+    #landing-page-body{
+        width: 100%;
+
+    }
+
+    #landing-page-content{
+        width: 70%;
+        margin: 0 auto;
+        height: 500px;
+    }
+
+</style>
